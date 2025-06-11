@@ -1,5 +1,65 @@
 .navbar{
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    background:white;
+    border-block-end: 1px solid gainsboro;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin:0;
+    padding: 0;
+    display: inline;
+
+}
+.nav-links li a{
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+}
+ul.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: purple;
+    text-decoration: underline;
+}
+li{
+    text-decoration: none;
+    padding: 15px;
+}
+.logo {
+    padding: 10px;
+    will-change: filter;
+    transition: filter 300ms;
+    display: flex;
+}
+img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+h4 {
+    margin-left: 10px;
+}
+button {
+   
+    background: black;
+    color: white;
+    border-radius: 5%;
+    padding: 1px 15px;
+}
+button:hover {
+color: black;
+border-color: white;
+background-color: white;
+
 }

@@ -1,35 +1,37 @@
 import React from "react";
 import "./Navbar.css";
+import Button from "../Button/Button";
 
-export const Navbar = () => {
+import logo from "../../assets/images/logo.png";
+
+const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <img src="logo.pang" alt="logo" />
-        HuggebyRoop
+        <img src={logo} />
+        <h4>HuggebyRoop</h4>
       </div>
-      <ul className="navbar-links">
-        <li>
-          <a className="navbar-links" href="">
-            Home
-          </a>
-        </li>
-        <li>
-          <a className="navbar-links" href="">
-            About
-          </a>
-        </li>
-        <li>
-          <a className="navbar-links" href="">
-            Page Details
-          </a>
-        </li>
-        <li>
-          <a className="navbar-links" href="">
-            Contact Us
-          </a>
-        </li>
-      </ul>
+      <div className="menu">
+        <ul className="navbar-links">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Page Details</a>
+          </li>
+
+          <li>
+            <a href="">Contact Us</a>
+          </li>
+          <li>
+            <Button />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
+export default Navbar;
