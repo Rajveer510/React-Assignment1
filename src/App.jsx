@@ -5,8 +5,25 @@ import Button from "./components/Button/Button";
 import Card from "../src/components/Card/Card";
 import one from "../src/assets/images/one.jpg";
 import Input from "./components/Input/Input";
+import TableComponent from "./components/Table/Table";
+import Footer from "./components/Footer/Footer";
 function App() {
   const [count, setCount] = useState(0);
+  const columns = [
+    { Header: "Name", accessor: "name" },
+    { Header: "Age", accessor: "age" },
+    { Header: "Roll", accessor: "roll" },
+  ];
+
+  const data = [
+    { name: "Adksd", age: "25", roll: "frontend" },
+    { name: "Adksd", age: "25", roll: "frontend" },
+    { name: "Adksd", age: "25", roll: "frontend" },
+    { name: "Adksd", age: "25", roll: "frontend" },
+    { name: "Adksd", age: "25", roll: "frontend" },
+    { name: "Adksd", age: "25", roll: "frontend" },
+    { name: "Adksd", age: "25", roll: "frontend" },
+  ];
 
   return (
     <>
@@ -18,6 +35,8 @@ function App() {
           image={one}
         />
         <Input />
+        <TableComponent columns={columns} data={data} />
+        <Footer />
       </div>
     </>
   );

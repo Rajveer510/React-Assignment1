@@ -5,4 +5,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   max-width: 95%;
+  font-family: "Merriweather", serif;
+  
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+                                         

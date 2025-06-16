@@ -1,0 +1,38 @@
+h3{
+    font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.flogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home h4 {
+  margin-bottom: 10px;
+}
+
+.home ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.home li {
+  margin-bottom: 5px;
+}
+
+.home a {
+  text-decoration: none;
+  color: #333;
+}
+
+.home a:hover {
+  color: #007bff;
+}
