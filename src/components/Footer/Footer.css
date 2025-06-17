@@ -3,36 +3,41 @@ h3{
 }
 
 .footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 40px 20px;
   display: flex;
   justify-content: space-between;
-  background-color: #f4f4f4;
-  padding: 20px;
+  flex-wrap: wrap;
 }
 
-.flogo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
 }
 
-.home h4 {
-  margin-bottom: 10px;
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  color: #f5c518;
 }
 
-.home ul {
+.footer-section ul {
   list-style-type: none;
   padding: 0;
 }
 
-.home li {
-  margin-bottom: 5px;
+.footer-section li {
+  margin-bottom: 8px;
 }
 
-.home a {
+.footer-section a {
+  color: #cccccc;
   text-decoration: none;
-  color: #333;
 }
 
-.home a:hover {
-  color: #007bff;
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
