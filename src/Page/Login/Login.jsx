@@ -1,17 +1,21 @@
-import App from ".."
 import React, { useState } from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     console.log("Email:", email);
     console.log("Password:", password);
     alert(`Logged in as ${email}`);
+  };
+
+  const goToRegister = () => {
+    navigate("/register");
   };
 
   return (
@@ -39,14 +43,18 @@ const Login = () => {
             required
           />
 
-          <button
-            type="submit"
-            className="login-button"
-            onClick={() => navigate("/App")}
-          >
-            Log In
-          </button>
+          <button type="submit">Log In</button>
         </form>
+
+        <p className="register-link">
+          Don't have an account?{" "}
+          <span
+            onClick={goToRegister}
+            style={{ color: "blue", cursor: "pointer" }}
+          >
+            Register
+          </span>
+        </p>
       </div>
     </div>
   );

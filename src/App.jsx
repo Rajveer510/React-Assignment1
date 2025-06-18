@@ -1,44 +1,17 @@
-import { useState } from "react";
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Button from "./components/Button/Button";
-import Card from "../src/components/Card/Card";
-import one from "../src/assets/images/one.jpg";
-import Input from "./components/Input/Input";
-import TableComponent from "./components/Table/Table";
-import Footer from "./components/Footer/Footer";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./Page/Home/Home.jsx";
+import About from "./Page/About/About.jsx";
 function App() {
-  const [count, setCount] = useState(0);
-  const columns = [
-    { Header: "Name", accessor: "name" },
-    { Header: "Age", accessor: "age" },
-    { Header: "Roll", accessor: "roll" },
-  ];
-
-  const data = [
-    { name: "Adksd", age: "25", roll: "frontend" },
-    { name: "Adksd", age: "25", roll: "frontend" },
-    { name: "Adksd", age: "25", roll: "frontend" },
-    { name: "Adksd", age: "25", roll: "frontend" },
-    { name: "Adksd", age: "25", roll: "frontend" },
-    { name: "Adksd", age: "25", roll: "frontend" },
-    { name: "Adksd", age: "25", roll: "frontend" },
-  ];
-
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Card
-        title="Nature View"
-        content="This is a beautiful view of nature."
-        image={one}
-      />
-      <Input />
-      <TableComponent columns={columns} data={data} />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 
