@@ -1,17 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./Page/Home/Home.jsx";
-import About from "./Page/About/About.jsx";
+import Button from "./components/Button/Button";
+//import Card from "./components/Card/Card";
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
+    <>
+      <div>
+        <Navbar />
+      
+      </div>
+    </>
   );
 }
 
