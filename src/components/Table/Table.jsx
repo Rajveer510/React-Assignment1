@@ -1,37 +1,21 @@
 import React from "react";
+import "./Table.css";
 
-const TableComponent = ({ columns, data }) => {
+const Table = ({ columns, data }) => {
   return (
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <table className="custom-table">
       <thead>
         <tr>
-          {columns.map((col, index) => (
-            <th
-              key={index}
-              style={{
-                border: "1px solid #ccc",
-                padding: "10px",
-                backgroundColor: "#f2f2f2",
-              }}
-            >
-              {col.Header}
-            </th>
+          {columns.map((col) => (
+            <th key={col.accessor}>{col.Header}</th>
           ))}
         </tr>
       </thead>
       <tbody>
-        {data.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            {columns.map((col, colIndex) => (
-              <td
-                key={colIndex}
-                style={{
-                  border: "1px solid #ddd",
-                  padding: "10px",
-                }}
-              >
-                {row[col.accessor]}
-              </td>
+        {data.map((row, index) => (
+          <tr key={index}>
+            {columns.map((col) => (
+              <td key={col.accessor}>{row[col.accessor]}</td>
             ))}
           </tr>
         ))}
@@ -40,4 +24,4 @@ const TableComponent = ({ columns, data }) => {
   );
 };
 
-export default TableComponent;
+export default Table;
