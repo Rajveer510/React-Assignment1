@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+import "../../App";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -12,10 +13,11 @@ const Login = () => {
     console.log("Email:", email);
     console.log("Password:", password);
     alert(`Logged in as ${email}`);
+    navigate("/Home");
   };
 
   const goToRegister = () => {
-    navigate("/register");
+    navigate("/App");
   };
 
   return (

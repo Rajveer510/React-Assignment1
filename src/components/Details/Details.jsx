@@ -1,6 +1,6 @@
 import React from "react";
 import "./Details.css";
-import Table from "../../components/Table/Table";
+import Table from "../Table/Table";
 
 const Detail = () => {
   const product = {
