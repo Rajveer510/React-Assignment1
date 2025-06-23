@@ -1,59 +1,32 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../assets/images/logo.png";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-section">
-        <h3>HuggebyRoop</h3>
-        <p>
-          Bringing timeless beauty to fabric with handcrafted embroidery made
-          with care and creativity.
-        </p>
+      <div className="footer-section logo">
+        <img src={logo} alt="Logo" />
+        <h2>HugByRoop</h2>
       </div>
-      <div className="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-        </ul>
+      <div className="footer-section about">
+        <h4>About</h4>
+        <p>We create modern solutions for your daily needs with elegance and speed.</p>
       </div>
-      <div className="footer-section">
+      <div className="footer-section social">
         <h4>Follow Us</h4>
-        <ul>
-          <li>
-            <a href="#">Facebook</a>
-          </li>
-          <li>
-            <a href="#">Instagram</a>
-          </li>
-          <li>
-            <a href="#">Twitter</a>
-          </li>
-        </ul>
+        <div className="social-icons">
+          <a href="#"><FaFacebook /></a>
+          <a href="#"><FaInstagram /></a>
+          <a href="#"><FaTwitter /></a>
+          <a href="#"><FaLinkedin /></a>
+        </div>
       </div>
-
-      <div className="footer-section">
-        <h4>Contact Us</h4>
-        <ul>
-          <li>
-            <a href="#">rajveerrayat8@gmai.com</a>
-          </li>
-          <li>
-            <a href="#">+91 6545824436</a>
-          </li>
-          <li>
-            <a href="#">V.P.O Kotla Nihang Punjab,140001</a>
-          </li>
-        </ul>
+      <div className="footer-section contact">
+        <h4>Contact</h4>
+        <p>Email: rajveerrayat9@.com</p>
+        <p>Phone: +91-1234567899</p>
       </div>
     </footer>
   );

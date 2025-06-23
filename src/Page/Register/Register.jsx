@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./Login.css";
+import "./Register.css";
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleRegister = () => {
     if (email && password) {
       localStorage.setItem("loggedIn", "true");
-      console.log("Login successful");
       navigate("/home");
     } else {
-      alert("Please enter both email and password");
+      alert("Please enter email and password");
     }
   };
 
   return (
-    <div className="login-wrapper">
-      <div className="login-box">
-        <h2>Login</h2>
+    <div className="register-wrapper">
+      <div className="register-box">
+        <h2>Create Account</h2>
         <input
           type="email"
           placeholder="Email Address"
@@ -33,13 +32,13 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleLogin}>Login</button>
-        <p className="login-footer">
-          Don't have an account? <Link to="/register">Register</Link>
+        <button onClick={handleRegister}>Register</button>
+        <p className="register-footer">
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;

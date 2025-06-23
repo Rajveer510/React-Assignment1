@@ -1,50 +1,23 @@
-// src/components/Navbar/Navbar.jsx
 import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../Button/Button";
-import logo from "../../assets/images/logo.png";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const logout = () => {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "/login";
+  };
+
   return (
-    <div className="navbar">
-      <div className="logo">
-        <img src={logo} alt="Logo" />
-        <h4>HuggebyRoop</h4>
+    <nav className="navbar">
+      <div className="logo">HugByRoop</div>
+      <div className="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#product">Product</a>
+        <a href="#contact">Contact</a>
+        <button onClick={logout} className="logout-button">Logout</button>
       </div>
-      <div className="menu">
-        <ul className="navbar-links">
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/details">Page Details</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
-          </li>
-          <li>
-            <Button />
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="details" element={<Details />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-      </Routes>
-    </Router>
+    </nav>
   );
 };
 
