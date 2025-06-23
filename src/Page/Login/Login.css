@@ -71,7 +71,7 @@
   text-decoration: underline;
 }
 
-/* ✅ Mobile Responsive */
+
 @media (max-width: 480px) {
   .login-box {
     padding: 25px 20px;
