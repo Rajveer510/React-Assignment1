@@ -18,12 +18,34 @@ const Home = () => {
     { Header: "Product", accessor: "name" },
     { Header: "Price", accessor: "price" },
     { Header: "Category", accessor: "category" },
+    { Header: "Category", accessor: "category" },
+    { Header: "Category", accessor: "category" },
+    { Header: "Category", accessor: "category" },
+    { Header: "Category", accessor: "category" },
+    { Header: "Category", accessor: "category" },
+    { Header: "Category", accessor: "category" },
   ];
 
   const data = [
     { name: "Embroidery Hoop", price: "₹500", category: "Handmade" },
     { name: "Custom Design", price: "₹1200", category: "Tailored" },
-    { name: "Suit Embroidery", price: "₹2000", category: "Clothing" },
+    { name: "Suit Embroidery", price: "₹200", category: "Clothing" },
+    { name: "Dupta Embroidery", price: "₹3000", category: "Clothing" },
+    { name: "Shirt Embroidery", price: "₹4000", category: "Clothing" },
+    { name: "T-Shirt Embroidery", price: "₹4000", category: "Clothing" },
+    { name: "Hair Assories Embroidery", price: "₹7000", category: "Clothing" },
+    { name: " Embroidery", price: "₹8000", category: "Clothing" },
+    { name: "Custom Design", price: "₹700", category: "Clothing" },
+    { name: "Dupta Embroidery", price: "₹900", category: "Clothing" },
+    { name: "Embroidery Hoop", price: "₹800", category: "Clothing" },
+    { name: "Shirt Embroidery", price: "₹200", category: "Clothing" },
+    { name: "T-Shirt Embroidery", price: "₹300", category: "Clothing" },
+    { name: "Hair Assories Embroidery", price: "₹100", category: "Clothing" },
+    { name: "Customized Embroidery", price: "₹500", category: "Clothing" },
+    { name: "T-Shirt Embroidery", price: "₹400", category: "Clothing" },
+    { name: "Shirt Embroidery", price: "₹600", category: "Clothing" },
+    { name: "Hoop Embroidery", price: "₹400", category: "Clothing" },
+    { name: "Suit Embroidery", price: "₹400", category: "Clothing" },
   ];
 
   return (
