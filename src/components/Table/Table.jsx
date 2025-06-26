@@ -3,29 +3,27 @@ import "./Table.css";
 
 const Table = () => {
   return (
-    <div style={{ overflowX: "auto" }}>
-      <table className="custom-table">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Status</th>
-            <th>Long Column Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Shirt</td>
-            <td>Blue cotton shirt</td>
-            <td>$20</td>
-            <td>5</td>
-            <td>In Stock</td>
-            <td>Extra long content here</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="table-scroll-container">
+      <div className="table-wrapper">
+        <table className="custom-table">
+          <thead>
+            <tr>
+              {columns.map((col) => (
+                <th key={col.accessor}>{col.Header}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, idx) => (
+              <tr key={idx}>
+                {columns.map((col) => (
+                  <td key={col.accessor}>{item[col.accessor]}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

@@ -17,8 +17,8 @@
 
 .contact-image img {
   width: 80%;
-  height: 500px;
-  object-fit: cover;
+  height: 378px;
+  object-fit: scale-down;
   border-radius: 0
   ;
 
@@ -68,3 +68,5 @@
 .contact-form button:hover {
   background-color: #0056b3;
 }
+
+
